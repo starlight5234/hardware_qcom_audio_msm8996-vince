@@ -270,13 +270,6 @@ ifeq ($(strip $(AUDIO_FEATURE_NO_AUDIO_OUT)),true)
   LOCAL_CFLAGS += -DNO_AUDIO_OUT
 endif
 
-#  NonLA feature
-ifeq ($(strip $(AUDIO_FEATURE_ENABLED_EXT_HDMI)),true)
-    LOCAL_CFLAGS += -DAUDIO_EXTERNAL_HDMI_ENABLED
-    LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/mm-audio/audio-parsers
-    LOCAL_SHARED_LIBRARIES += libaudioparsers
-endif
-
 # Hardware specific feature
 ifeq ($(strip $(BOARD_SUPPORTS_SOUND_TRIGGER)),true)
     ST_FEATURE_ENABLE := true

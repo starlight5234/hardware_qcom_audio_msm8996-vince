@@ -592,11 +592,9 @@ LOCAL_CFLAGS += \
     -Wall \
     -Werror \
     -Wno-unused-function \
-    -Wno-unused-variable \
-    -DDTSHD_PARSER_ENABLED
+    -Wno-unused-variable
 
 LOCAL_SHARED_LIBRARIES := \
-    libaudioparsers \
     libaudioroute \
     libaudioutils \
     libcutils \
